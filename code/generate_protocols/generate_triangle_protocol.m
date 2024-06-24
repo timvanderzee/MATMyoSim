@@ -28,7 +28,7 @@ for i=1:p.no_of_triangles
     dx = p.triangle_nm / no_of_triangle_steps
     output.dhsl = [output.dhsl ; dx * ones(no_of_triangle_steps,1)];
     % Plateau
-    no_of_plateau_steps = round(p.plateau_s / p.time_step);
+    no_of_plateau_steps = round(p.plateau_s(i) / p.time_step);
     output.dhsl = [output.dhsl ; zeros(no_of_plateau_steps,1)];
     % Ramp down
     output.dhsl = [output.dhsl ; -dx * ones(no_of_triangle_steps,1)];
@@ -37,9 +37,11 @@ for i=1:p.no_of_triangles
         output.dhsl = [output.dhsl ; zeros(round(p.inter_triangle_s / p.time_step),1)];
     end
 end
+
 % Pre ktr
 no_of_steps = round(p.pre_ktr_s / p.time_step);
 output.dhsl = [output.dhsl ; zeros(no_of_steps,1)];
+
 % k_tr
 output.dhsl = [output.dhsl ; -p.k_tr_nm];
 no_of_steps = round(p.k_tr_s / p.time_step);

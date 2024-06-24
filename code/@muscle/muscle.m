@@ -4,6 +4,8 @@ classdef muscle < handle
         % These are properties that can be accessed from outside the
         % muscle class
         
+        sc_sigma;
+        sc_L;        
         no_of_half_sarcomeres;
         series_k_linear_per_hs;
         series_k_linear;
