@@ -1,6 +1,3 @@
-cMyoSim_path = 'C:\Users\u0167448\Documents\GitHub\project_horslen_fitting\cMyoSim';
-MATMyoSim_path = 'C:\Users\u0167448\Documents\GitHub\MATMyoSim';
-
 % load MATMyoSim output
 load([MATMyoSim_path,'\code\temp\horslen_ramp_output.myo'],'-mat')
 
