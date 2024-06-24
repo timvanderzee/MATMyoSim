@@ -32,6 +32,9 @@ switch (obj.kinetic_scheme)
 
     case '4state_with_SRX_and_exp_k5'
         update_4state_with_SRX_and_exp_k5(obj, time_step);
+  
+    case '4state_with_SRX_cMyoSim'
+        update_4state_with_SRX_cMyoSim(obj, time_step, m_props, delta_hsl);        
         
     case '6state_with_SRX'
         update_6state_with_SRX(obj, time_step);
