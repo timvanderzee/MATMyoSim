@@ -59,4 +59,15 @@ xlim([0 1.2])
 xlabel('Time (s)')
 
 
+    figure(2)
+
+    id = sim_output.time_s < 0.85;
+    plot(sim_output.hs_length(id), sim_output.hs_force(id)/1000,'color',color(j,:)); hold on
+    
+    id = cMyoSim_output(:,1) < 0.85;
+    plot(cMyoSim_output((id),7), cMyoSim_output((id),3)/1000,'--','color',color(j,:))
+    
+    xlabel('hs length (nm)'); 
+    ylabel('hs force (kPa)')
+
 end

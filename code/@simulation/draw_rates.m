@@ -58,28 +58,36 @@ if (obj.myosim_options.figure_rates>0)
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
                 log10(obj.myosim_muscle.hs(1).rate_structure.r2 * ...
                     ones(numel(obj.myosim_muscle.hs(1).myofilaments.x),1)),'b-');
-        ylim([-1 4]);
+        axis([-10 10 0 3]);
+        title('r1 & r2')
+        
         subplot(4,1,2);
         hold on;
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
                 log10(obj.myosim_muscle.hs(1).rate_structure.r3),'r-');
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
                 log10(obj.myosim_muscle.hs(1).rate_structure.r4),'b-');
-        ylim([-1 4]);
+        axis([-10 10 0 3]);
+        title('r3 & r4')
+        
         subplot(4,1,3);
         hold on;
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
             log10(obj.myosim_muscle.hs(1).rate_structure.r5),'r-');
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
             log10(obj.myosim_muscle.hs(1).rate_structure.r6),'b-');
-        ylim([-1 4]);
+        axis([-10 10 0 3]);
+        title('r5 & r7')
+        
         subplot(4,1,4);
         hold on;
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
             log10(obj.myosim_muscle.hs(1).rate_structure.r7),'r-');
         plot(obj.myosim_muscle.hs(1).myofilaments.x, ...
             log10(obj.myosim_muscle.hs(1).rate_structure.r8),'b-');
-        ylim([-1 4]);
+        axis([-10 10 0 3]);
+        title('r6')
+        
     end
     
 end

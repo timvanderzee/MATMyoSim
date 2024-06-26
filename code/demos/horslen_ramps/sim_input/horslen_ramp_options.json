@@ -3,6 +3,6 @@
 	{
         "drawing_skip": 200,
 		"figure_simulation_output": 1,
-		"figure_rates": 0
+		"figure_rates": 10
 	}
 }
